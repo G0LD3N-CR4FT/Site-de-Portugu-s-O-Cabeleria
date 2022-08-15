@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+
+}
+
+/* Animação Clip-path */
+
+#sec {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100% !important;
+    height: 100vh;
+    background: url('../img/fundo.jpg');
+    background-attachment: fixed;
+    clip-path: circle(0px at center);
+}
+
+.cont {
+    position: relative;
+    margin-top: 200vh;
+    background: #fff;
+    padding: 100px;
+    width: 100%;
+}
+
+.cont h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.title {
+    position: relative;
+    top: 250px;
+    z-index: 1;
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+}
+
+.quiz {
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fim da Animação */
+
+.bloqueio {
+    opacity: 0;
+    display: none;
+}
+
+#timer {
+    font-size: 50px;
+}
+
+.alternativas {
+    width: 200px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.questoes {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.btnbanner input {
+    background-color: #9f0000;
+    border: 2px solid #9f0000;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 125%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 250px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.btnbanner input:hover {
+    background: none;
+    color: #9f0000;
+    transition: 0.5s;
+}
+
+.errada {
+    background-color: #9f0000;
+    opacity: 0.8;
+}
+.certa {
+    background-color: green;
+    opacity: 0.8;
+}
