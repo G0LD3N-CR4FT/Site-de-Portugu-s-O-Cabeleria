@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('#button').click(function(){
         $('div').removeClass('bloqueio');
         $('#button').addClass('bloqueio');
-        var duration = 60 * (1+1/2); // Converter para segundos
+        var duration = 60 * (1/3); // Converter para segundos
         display = document.querySelector('#timer'); // selecionando o timer
     startTimer(duration, display); // iniciando o timer
     })
