@@ -1,8 +1,3 @@
-var section = document.querySelector('section');
-window.addEventListener('scroll', function(){
-    var value = window.scrollY;
-    section.style.clipPath = `circle(${value}px at center)`
-})
 
 // Botão começar
 
@@ -190,9 +185,13 @@ $(document).ready(function(event){
             $('#acabar').removeClass('bloqueio');
         }
     });
+
+    var mensagem1 = 'Erros:';
+    var mensagem2 = 'Acertos:';
+
     $('#acabar').click(function(event){
         $('.fechar').addClass('bloqueio');
-        document.getElementById('resultadoerros').value = errado;
-        document.getElementById('resultadoacertos').value = certo;
+        $('#erros').append(mensagem1, errado);
+        $('#acertos').append(mensagem2, certo);
     })
 })
