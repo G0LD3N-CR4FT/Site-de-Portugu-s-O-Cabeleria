@@ -13,10 +13,18 @@
 <body>
     <div class="jumbotron jumbotron-fluid inicial">
         <p class="line typing-animation">Seja bem vindo</p>
+        <div class="btnbanner text-center">
+            <a href="#autor">
+                <input type="button" value="Sobre o Autor"></a>
+            <a href="#obras">
+                <input type="button" value="Algumas Obras"></a>
+            <a href="#livro">
+                <input type="button" value="O Cabeleira"></a>
+        </div>
     </div>
     <div class="container-fluid">
         <div class="row biografia">
-            <div class="col-12 col-sm-2 col-md-2">
+            <div id="autor" class="col-12 col-sm-2 col-md-2 ">
                 <img class="img-fluid" src="img/cabeleira.jpg">
             </div>
             <div class="col-12 col-sm-9 col-md-9">
@@ -24,7 +32,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dicta debitis, vel deleniti voluptate odit, amet vero error repellendus, assumenda inventore. Veniam cumque fugit soluta odit nisi? Officiis, odit reiciendis.
             </div>
         </div>
-        <div class="biografia mt-5">
+        <div id="obras" class="biografia mt-5">
             <h1 class="text-center">Suas Obras</h1>
             <div class="row">
          <div class="col-12 col-sm-4 col-md-4 espaçamento">
@@ -289,14 +297,39 @@
                 <input class="alternativas" id="4alternativa-1" type="button" onclick='this.disabled=true' value="Indianista">
                 <input class="alternativas" id="4alternativa-2" type="button" onclick='this.disabled=true' value="Ultrarromantismo">
                 <input class="alternativas" id="4alternativa-3" type="button" onclick='this.disabled=true' value="Regionalista">
-                <p class="questoes">
+            <p class="questoes">
                 Questão 5) Onde e quando se passa?</p>
                 <input class="alternativas" id="5alternativa-1" type="button" onclick='this.disabled=true' value="Rio de Janeiro, século XVIII">
                 <input class="alternativas" id="5alternativa-2" type="button" onclick='this.disabled=true' value="Pernambuco, século XVIII ">
                 <input class="alternativas" id="5alternativa-3" type="button" onclick='this.disabled=true' value="Estados Unidos, século XXI">
+            <p class="questoes">
+                Questão 6) Qual o nome do Autor?</p>
+                <input class="alternativas" id="6alternativa-1" type="button" onclick='this.disabled=true' value="Machado de Assis">
+                <input class="alternativas" id="6alternativa-2" type="button" onclick='this.disabled=true' value="José de Alencar">
+                <input class="alternativas" id="6alternativa-3" type="button" onclick='this.disabled=true' value="Franklin Távora">
+            <p class="questoes">
+                Questão 7) Como é a linguagem do livro?</p>
+                <input class="alternativas" id="7alternativa-1" type="button" onclick='this.disabled=true' value="Atual">
+                <input class="alternativas" id="7alternativa-2" type="button" onclick='this.disabled=true' value="Idade Média">
+                <input class="alternativas" id="7alternativa-3" type="button" onclick='this.disabled=true' value="Mais antiga e complicada">
+            <p class="questoes">
+                Questão 8) Qual outra tipo de romantismo presente?</p>
+                <input class="alternativas" id="8alternativa-1" type="button" onclick='this.disabled=true' value="Feliz">
+                <input class="alternativas" id="8alternativa-2" type="button" onclick='this.disabled=true' value="Histórico">
+                <input class="alternativas" id="8alternativa-3" type="button" onclick='this.disabled=true' value="Mal do século">
+            <p class="questoes">
+                Questão 9) Qual o livro que não pertence ao autor?</p>
+                <input class="alternativas" id="9alternativa-1" type="button" onclick='this.disabled=true' value="Don Quixote">
+                <input class="alternativas" id="9alternativa-2" type="button" onclick='this.disabled=true' value="O matuto">
+                <input class="alternativas" id="9alternativa-3" type="button" onclick='this.disabled=true' value="Três lágrimas">
+            <p class="questoes">
+                Questão 10) Que povo é representado no livro?</p>
+                <input class="alternativas" id="10alternativa-1" type="button" onclick='this.disabled=true' value="O povo do nordeste">
+                <input class="alternativas" id="10alternativa-2" type="button" onclick='this.disabled=true' value="Os cariocas">
+                <input class="alternativas" id="10alternativa-3" type="button" onclick='this.disabled=true' value="Os paulistas">
                 <p class="questoes">
                     <div class="btnbanner">
-                        <input class="bloqueio" id="acabar" type="button" value="Finalizar">
+                        <input class="bloqueio" id="acabar" type="button" data-toggle="modal" data-target="#ExemploModalCentralizado" value="Finalizar">
                     </div>
                 </p>
     </div>
@@ -309,6 +342,36 @@
         
         
     </h1>
+  <!-- Modal -->
+  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Resultados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1 class="questoes" id="total">
+
+
+            </h1>
+            <h1 class="questoes" id="acertos">
+
+
+            </h1>
+                <h1 class="questoes" id="erros">
+
+                    
+            </h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
