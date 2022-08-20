@@ -24,6 +24,7 @@ function startTimer(duration, display) {
         }
         if(minutes == 0 && seconds == 0){
             $('#timer').addClass('bloqueio');
+            $('#acabar').removeClass('bloqueio');
             $('#travar').addClass('bloqueio');
         }
     }, 1000);
@@ -34,9 +35,10 @@ certo = 0;
 errado = 0;
 $(document).ready(function(event){
     $('#1alternativa-1').click(function(event){
+        $('#1alternativa-1').addClass('selecionada');
         $('#1alternativa-1').addClass('errada');
-        $('#1alternativa-2').addClass('bloqueio');
-        $('#1alternativa-3').addClass('bloqueio');
+        $('#1alternativa-2').addClass('certa');
+        $('#1alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -44,9 +46,10 @@ $(document).ready(function(event){
         }
     });
     $('#1alternativa-2').click(function(event){
+        $('#1alternativa-2').addClass('selecionada');
         $('#1alternativa-2').addClass('certa');
-        $('#1alternativa-1').addClass('bloqueio');
-        $('#1alternativa-3').addClass('bloqueio');
+        $('#1alternativa-1').addClass('errada');
+        $('#1alternativa-3').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -54,9 +57,10 @@ $(document).ready(function(event){
         }
     });
     $('#1alternativa-3').click(function(event){
+        $('#1alternativa-3').addClass('selecionada');
         $('#1alternativa-3').addClass('errada');
-        $('#1alternativa-1').addClass('bloqueio');
-        $('#1alternativa-2').addClass('bloqueio');
+        $('#1alternativa-1').addClass('errada');
+        $('#1alternativa-2').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -64,9 +68,10 @@ $(document).ready(function(event){
         }
     });
     $('#2alternativa-1').click(function(event){
+        $('#2alternativa-1').addClass('selecionada');
         $('#2alternativa-1').addClass('certa');
-        $('#2alternativa-2').addClass('bloqueio');
-        $('#2alternativa-3').addClass('bloqueio');
+        $('#2alternativa-2').addClass('errada');
+        $('#2alternativa-3').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -74,9 +79,10 @@ $(document).ready(function(event){
         }
     });
     $('#2alternativa-2').click(function(event){
+        $('#2alternativa-2').addClass('selecionada');
         $('#2alternativa-2').addClass('errada');
-        $('#2alternativa-1').addClass('bloqueio');
-        $('#2alternativa-3').addClass('bloqueio');
+        $('#2alternativa-1').addClass('certa');
+        $('#2alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -84,9 +90,10 @@ $(document).ready(function(event){
         }
     });
     $('#2alternativa-3').click(function(event){
+        $('#2alternativa-3').addClass('selecionada');
         $('#2alternativa-3').addClass('errada');
-        $('#2alternativa-1').addClass('bloqueio');
-        $('#2alternativa-2').addClass('bloqueio');
+        $('#2alternativa-1').addClass('errada');
+        $('#2alternativa-2').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -94,9 +101,10 @@ $(document).ready(function(event){
         }
     });
     $('#3alternativa-1').click(function(event){
+        $('#3alternativa-1').addClass('selecionada');
         $('#3alternativa-1').addClass('errada');
-        $('#3alternativa-2').addClass('bloqueio');
-        $('#3alternativa-3').addClass('bloqueio');
+        $('#3alternativa-2').addClass('certa');
+        $('#3alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -104,9 +112,10 @@ $(document).ready(function(event){
         }
     });
     $('#3alternativa-2').click(function(event){
+        $('#3alternativa-2').addClass('selecionada');
         $('#3alternativa-2').addClass('certa');
-        $('#3alternativa-1').addClass('bloqueio');
-        $('#3alternativa-3').addClass('bloqueio');
+        $('#3alternativa-1').addClass('errada');
+        $('#3alternativa-3').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -114,9 +123,10 @@ $(document).ready(function(event){
         }
     });
     $('#3alternativa-3').click(function(event){
+        $('#3alternativa-3').addClass('selecionada');
         $('#3alternativa-3').addClass('errada');
-        $('#3alternativa-1').addClass('bloqueio');
-        $('#3alternativa-2').addClass('bloqueio');
+        $('#3alternativa-1').addClass('errada');
+        $('#3alternativa-2').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -124,9 +134,10 @@ $(document).ready(function(event){
         }
     });
     $('#4alternativa-1').click(function(event){
+        $('#4alternativa-1').addClass('selecionada');
         $('#4alternativa-1').addClass('errada');
-        $('#4alternativa-2').addClass('bloqueio');
-        $('#4alternativa-3').addClass('bloqueio');
+        $('#4alternativa-2').addClass('errada');
+        $('#4alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -134,9 +145,10 @@ $(document).ready(function(event){
         }
     });
     $('#4alternativa-2').click(function(event){
+        $('#4alternativa-2').addClass('selecionada');
         $('#4alternativa-2').addClass('errada');
-        $('#4alternativa-1').addClass('bloqueio');
-        $('#4alternativa-3').addClass('bloqueio');
+        $('#4alternativa-1').addClass('errada');
+        $('#4alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -144,9 +156,10 @@ $(document).ready(function(event){
         }
     });
     $('#4alternativa-3').click(function(event){
+        $('#4alternativa-3').addClass('selecionada');
         $('#4alternativa-3').addClass('certa');
-        $('#4alternativa-1').addClass('bloqueio');
-        $('#4alternativa-2').addClass('bloqueio');
+        $('#4alternativa-1').addClass('errada');
+        $('#4alternativa-2').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -154,9 +167,10 @@ $(document).ready(function(event){
         }
     });
     $('#5alternativa-1').click(function(event){
+        $('#5alternativa-1').addClass('selecionada');
         $('#5alternativa-1').addClass('errada');
-        $('#5alternativa-2').addClass('bloqueio');
-        $('#5alternativa-3').addClass('bloqueio');
+        $('#5alternativa-2').addClass('certa');
+        $('#5alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -164,9 +178,10 @@ $(document).ready(function(event){
         }
     });
     $('#5alternativa-2').click(function(event){
+        $('#5alternativa-2').addClass('selecionada');
         $('#5alternativa-2').addClass('certa');
-        $('#5alternativa-1').addClass('bloqueio');
-        $('#5alternativa-3').addClass('bloqueio');
+        $('#5alternativa-1').addClass('errada');
+        $('#5alternativa-3').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -174,9 +189,10 @@ $(document).ready(function(event){
         }
     });
     $('#5alternativa-3').click(function(event){
+        $('#5alternativa-3').addClass('selecionada');
         $('#5alternativa-3').addClass('errada');
-        $('#5alternativa-1').addClass('bloqueio');
-        $('#5alternativa-2').addClass('bloqueio');
+        $('#5alternativa-1').addClass('errada');
+        $('#5alternativa-2').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -185,9 +201,10 @@ $(document).ready(function(event){
     });
 
     $('#6alternativa-1').click(function(event){
+        $('#6alternativa-1').addClass('selecionada');
         $('#6alternativa-1').addClass('errada');
-        $('#6alternativa-2').addClass('bloqueio');
-        $('#6alternativa-3').addClass('bloqueio');
+        $('#6alternativa-2').addClass('errada');
+        $('#6alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -195,9 +212,10 @@ $(document).ready(function(event){
         }
     });
     $('#6alternativa-2').click(function(event){
+        $('#6alternativa-2').addClass('selecionada');
         $('#6alternativa-2').addClass('errada');
-        $('#6alternativa-1').addClass('bloqueio');
-        $('#6alternativa-3').addClass('bloqueio');
+        $('#6alternativa-1').addClass('errada');
+        $('#6alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -205,9 +223,10 @@ $(document).ready(function(event){
         }
     });
     $('#6alternativa-3').click(function(event){
+        $('#6alternativa-3').addClass('selecionada');
         $('#6alternativa-3').addClass('certa');
-        $('#6alternativa-1').addClass('bloqueio');
-        $('#6alternativa-2').addClass('bloqueio');
+        $('#6alternativa-1').addClass('errada');
+        $('#6alternativa-2').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -216,9 +235,10 @@ $(document).ready(function(event){
     });
     
     $('#7alternativa-1').click(function(event){
+        $('#7alternativa-1').addClass('selecionada');
         $('#7alternativa-1').addClass('errada');
-        $('#7alternativa-2').addClass('bloqueio');
-        $('#7alternativa-3').addClass('bloqueio');
+        $('#7alternativa-2').addClass('errada');
+        $('#7alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -226,9 +246,10 @@ $(document).ready(function(event){
         }
     });
     $('#7alternativa-2').click(function(event){
+        $('#7alternativa-2').addClass('selecionada');
         $('#7alternativa-2').addClass('errada');
-        $('#7alternativa-1').addClass('bloqueio');
-        $('#7alternativa-3').addClass('bloqueio');
+        $('#7alternativa-1').addClass('errada');
+        $('#7alternativa-3').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -236,9 +257,10 @@ $(document).ready(function(event){
         }
     });
     $('#7alternativa-3').click(function(event){
+        $('#7alternativa-3').addClass('selecionada');
         $('#7alternativa-3').addClass('certa');
-        $('#7alternativa-1').addClass('bloqueio');
-        $('#7alternativa-2').addClass('bloqueio');
+        $('#7alternativa-1').addClass('errada');
+        $('#7alternativa-2').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -248,9 +270,10 @@ $(document).ready(function(event){
 
     
     $('#8alternativa-1').click(function(event){
+        $('#8alternativa-1').addClass('selecionada');
         $('#8alternativa-1').addClass('errada');
-        $('#8alternativa-2').addClass('bloqueio');
-        $('#8alternativa-3').addClass('bloqueio');
+        $('#8alternativa-2').addClass('certa');
+        $('#8alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -258,9 +281,10 @@ $(document).ready(function(event){
         }
     });
     $('#8alternativa-2').click(function(event){
+        $('#8alternativa-2').addClass('selecionada');
         $('#8alternativa-2').addClass('certa');
-        $('#8alternativa-1').addClass('bloqueio');
-        $('#8alternativa-3').addClass('bloqueio');
+        $('#8alternativa-1').addClass('errada');
+        $('#8alternativa-3').addClass('errada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -268,9 +292,10 @@ $(document).ready(function(event){
         }
     });
     $('#8alternativa-3').click(function(event){
+        $('#8alternativa-3').addClass('selecionada');
         $('#8alternativa-3').addClass('errada');
-        $('#8alternativa-1').addClass('bloqueio');
-        $('#8alternativa-2').addClass('bloqueio');
+        $('#8alternativa-1').addClass('errada');
+        $('#8alternativa-2').addClass('certa');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -280,9 +305,10 @@ $(document).ready(function(event){
 
     
     $('#9alternativa-1').click(function(event){
+        $('#9alternativa-1').addClass('selecionada');
         $('#9alternativa-1').addClass('certa');
-        $('#9alternativa-2').addClass('bloqueio');
-        $('#9alternativa-3').addClass('bloqueio');
+        $('#9alternativa-2').addClass('errada');
+        $('#9alternativa-3').addClass('berrada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -290,9 +316,10 @@ $(document).ready(function(event){
         }
     });
     $('#9alternativa-2').click(function(event){
+        $('#9alternativa-2').addClass('selecionada');
         $('#9alternativa-2').addClass('errada');
-        $('#9alternativa-1').addClass('bloqueio');
-        $('#9alternativa-3').addClass('bloqueio');
+        $('#9alternativa-1').addClass('certa');
+        $('#9alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -300,9 +327,10 @@ $(document).ready(function(event){
         }
     });
     $('#9alternativa-3').click(function(event){
+        $('#9alternativa-3').addClass('selecionada');
         $('#9alternativa-3').addClass('errada');
-        $('#9alternativa-1').addClass('bloqueio');
-        $('#9alternativa-2').addClass('bloqueio');
+        $('#9alternativa-1').addClass('certa');
+        $('#9alternativa-2').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -312,9 +340,10 @@ $(document).ready(function(event){
 
     
     $('#10alternativa-1').click(function(event){
+        $('#10alternativa-1').addClass('selecionada');
         $('#10alternativa-1').addClass('certa');
-        $('#10alternativa-2').addClass('bloqueio');
-        $('#10alternativa-3').addClass('bloqueio');
+        $('#10alternativa-2').addClass('errada');
+        $('#10alternativa-3').addClass('berrada');
         soma = soma+1;
         certo = certo+1;
         if(soma == 10){
@@ -322,9 +351,10 @@ $(document).ready(function(event){
         }
     });
     $('#10alternativa-2').click(function(event){
+        $('#10alternativa-2').addClass('selecionada');
         $('#10alternativa-2').addClass('errada');
-        $('#10alternativa-1').addClass('bloqueio');
-        $('#10alternativa-3').addClass('bloqueio');
+        $('#10alternativa-1').addClass('certa');
+        $('#10alternativa-3').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -332,9 +362,10 @@ $(document).ready(function(event){
         }
     });
     $('#10alternativa-3').click(function(event){
+        $('#10alternativa-3').addClass('selecionada');
         $('#10alternativa-3').addClass('errada');
-        $('#10alternativa-1').addClass('bloqueio');
-        $('#10alternativa-2').addClass('bloqueio');
+        $('#10alternativa-1').addClass('certa');
+        $('#10alternativa-2').addClass('errada');
         soma = soma+1;
         errado = errado+1;
         if(soma == 10){
@@ -355,10 +386,10 @@ $(document).ready(function(event){
             if(certo < 8 && certo >=6 ){
                 var mensagem1 ='Média eu diria';
                 }
-            if(certo == 5){
+            if(certo == 5 && errado == 5){
                 var mensagem1 ='Tudo em perfeito equilíbrio como diria Thanos';
                 }
-            if(certo < 5 && certo >= 3){
+            if(certo <= 5 && certo >= 3){
                 var mensagem1 ='Podia ser melhor em, vai estudar';
                 }
             if(certo < 3){
@@ -367,6 +398,9 @@ $(document).ready(function(event){
             if(errado == 10){
                 var mensagem1 ='Como você teve a capacidade de errar tudo, surpreendente';
                 }
+            if(certo == 0 && errado == 0){
+                var mensagem1 ='Não deu tempo de fazer nenhuma? Tempo é dinheiro meu caro';
+            }
         $('.fechar').addClass('bloqueio');
         $('#total').append(mensagem1);
         $('#erros').append(mensagem3, errado);

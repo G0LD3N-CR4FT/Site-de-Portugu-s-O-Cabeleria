@@ -61,6 +61,7 @@
     width: 200px;
     border-radius: 25px;
     cursor: pointer;
+    margin: 10px;
 }
 
 .questoes {
@@ -91,12 +92,19 @@
 .errada {
     background-color: #9f0000;
     color: #000;
-    opacity: 0.8;
+    opacity: 0.7;
+    border: none;
 }
 .certa {
     background-color: green;
     color: #000;
-    opacity: 0.8;
+    opacity: 0.7;
+    border: none;
+}
+
+.selecionada {
+    border: 3px solid rgb(0, 0, 0);
+    opacity: 1.0;
 }
 
 /* Botão de voltar ao Topo */
