@@ -399,7 +399,7 @@ $(document).ready(function(event){
                 var mensagem1 ='Como você teve a capacidade de errar tudo, surpreendente';
                 }
             if(certo == 0 && errado == 0){
-                var mensagem1 ='Não deu tempo de fazer nenhuma? Tempo é dinheiro meu caro';
+                var mensagem1 ='Não deu tempo de fazer nenhuma? Tempo é dinheiro meu/minha caro(a)';
             }
         $('.fechar').addClass('bloqueio');
         $('#total').append(mensagem1);
@@ -408,3 +408,11 @@ $(document).ready(function(event){
     })
 })
 
+$(document).ready(function(e){
+    $('#sinopse').click(function(e){
+       $('#sinopse').addClass('bloqueio');
+       $('#textosinopse').removeClass('bloqueio');
+       $('#capalivro').addClass('bloqueio');
+       $('#capa').removeClass('bloqueio');
+    });
+});
