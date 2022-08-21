@@ -234,6 +234,10 @@
     border-radius: 10px;
 }
 
+.bordaimagem{
+    border: 3px solid #9f0000;
+    border-radius: 10px;
+}
 /* Fim das Obras */
 
 /* Animação de texto animado */
