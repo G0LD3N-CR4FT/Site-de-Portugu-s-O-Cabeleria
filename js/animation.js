@@ -410,9 +410,27 @@ $(document).ready(function(event){
 
 $(document).ready(function(e){
     $('#sinopse').click(function(e){
-       $('#sinopse').addClass('bloqueio');
        $('#textosinopse').removeClass('bloqueio');
        $('#capalivro').addClass('bloqueio');
-       $('#capa').removeClass('bloqueio');
+       $('#textopersonagens').addClass('bloqueio');
+       $('#textotendencias').addClass('bloqueio');
     });
+    $('#capa').click(function(e){
+        $('#textosinopse').addClass('bloqueio');
+        $('#textopersonagens').addClass('bloqueio');
+        $('#textotendencias').addClass('bloqueio');
+        $('#capalivro').removeClass('bloqueio');
+     });
+     $('#personagens').click(function(e){
+        $('#textosinopse').addClass('bloqueio');
+        $('#textopersonagens').removeClass('bloqueio');
+        $('#textotendencias').addClass('bloqueio');
+        $('#capalivro').addClass('bloqueio');
+     });
+     $('#tendencias').click(function(e){
+        $('#textosinopse').addClass('bloqueio');
+        $('#textopersonagens').addClass('bloqueio');
+        $('#textotendencias').removeClass('bloqueio');
+        $('#capalivro').addClass('bloqueio');
+     });
 });
