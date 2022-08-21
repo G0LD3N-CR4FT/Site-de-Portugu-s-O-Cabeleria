@@ -405,32 +405,32 @@ $(document).ready(function(event){
         $('#total').append(mensagem1);
         $('#erros').append(mensagem3, errado);
         $('#acertos').append(mensagem2, certo);
-    })
-})
+    });
+});
 
 $(document).ready(function(e){
     $('#sinopse').click(function(e){
-       $('#textosinopse').removeClass('bloqueio');
-       $('#capalivro').addClass('bloqueio');
-       $('#textopersonagens').addClass('bloqueio');
-       $('#textotendencias').addClass('bloqueio');
+       $('#textosinopse').removeClass('outrobloqueio');
+       $('#capalivro').addClass('outrobloqueio');
+       $('#textopersonagens').addClass('outrobloqueio');
+       $('#textotendencias').addClass('outrobloqueio');
     });
     $('#capa').click(function(e){
-        $('#textosinopse').addClass('bloqueio');
-        $('#textopersonagens').addClass('bloqueio');
-        $('#textotendencias').addClass('bloqueio');
-        $('#capalivro').removeClass('bloqueio');
+        $('#textosinopse').addClass('outrobloqueio');
+        $('#textopersonagens').addClass('outrobloqueio');
+        $('#textotendencias').addClass('outrobloqueio');
+        $('#capalivro').removeClass('outrobloqueio');
      });
      $('#personagens').click(function(e){
-        $('#textosinopse').addClass('bloqueio');
-        $('#textopersonagens').removeClass('bloqueio');
-        $('#textotendencias').addClass('bloqueio');
-        $('#capalivro').addClass('bloqueio');
+        $('#textosinopse').addClass('outrobloqueio');
+        $('#textopersonagens').removeClass('outrobloqueio');
+        $('#textotendencias').addClass('outrobloqueio');
+        $('#capalivro').addClass('outrobloqueio');
      });
      $('#tendencias').click(function(e){
-        $('#textosinopse').addClass('bloqueio');
-        $('#textopersonagens').addClass('bloqueio');
-        $('#textotendencias').removeClass('bloqueio');
-        $('#capalivro').addClass('bloqueio');
+        $('#textosinopse').addClass('outrobloqueio');
+        $('#textopersonagens').addClass('outrobloqueio');
+        $('#textotendencias').removeClass('outrobloqueio');
+        $('#capalivro').addClass('outrobloqueio');
      });
 });
