@@ -389,7 +389,7 @@ $(document).ready(function(event){
             if(certo == 5 && errado == 5){
                 var mensagem1 ='Tudo em perfeito equilíbrio como diria Thanos';
                 }
-            if(certo <= 5 && certo >= 3){
+            if(certo <= 5 && certo >= 3 && errado != 5){
                 var mensagem1 ='Podia ser melhor em, vai estudar';
                 }
             if(certo < 3){
